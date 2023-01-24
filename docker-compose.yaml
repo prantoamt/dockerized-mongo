@@ -1,0 +1,37 @@
+# Use root/example as user/password credentials
+version: '3.1'
+services:
+  mongo:
+    image: mongo
+    container_name: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
+    volumes:
+      - ./db-data:/data/db
+    networks: 
+      - mongo_net
+  mongo-express:
+    image: mongo-express
+    container_name: mongo-exporess
+    restart: always
+    ports:
+      - 8081:8081
+    depends_on:
+      - mongo
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: ${MONGO_INITDB_ROOT_USERNAME}
+      ME_CONFIG_MONGODB_ADMINPASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
+      ME_CONFIG_MONGODB_URL: mongodb://root:example@mongo:27017/
+    volumes:
+      - ./db-data:/data/db
+    networks: 
+      - mongo_net
+
+volumes:
+  db-data:
+networks:
+  mongo_net:
+    name: dockerized_mongo
+    driver: bridge

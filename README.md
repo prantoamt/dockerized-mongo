@@ -3,13 +3,12 @@
 
 - [Before you start](#before-you-start)
 - [Quick Start](#quick-start)
-    + [Install pdm as python package manager](#install-pdm-as-python-package-manager)
     + [Clone repo](#clone-repo)
     + [Goto the base directory](#goto-the-base-directory)
-    + [Install the dependencies](#install-the-dependencies)
-    + [Run the project](#run-the-project)
-    + [See project in action](#see-project-in-action)
-- [Api](#api)
+    + [Create an .env file](#create-an-.env-file)
+    + [Write your credentials in the .env file](#write-your-credentials-in-the-.env-file)
+    + [Run the container](#run-the-container)
+    + [Access your db with mongodb tools](#access-your-db-with-mongodb-tools)
 
 
 # Before you start

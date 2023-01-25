@@ -14,7 +14,7 @@
 # Before you start
 ----------------------------
 Hello! Welcome to the my dockerized mongodb repository. 
-This repository contains a simple setup with docker-compose to run mongo image on your local machine.
+This repository contains a simple setup with docker-compose to run mongodb image on your local machine.
 This `readme.md` file will guide you to run the container. 
 I presume you have docker installed in your local machine.
 The section [Quick Start](#quick-start) has all the required steps to run the container. Before that, please read the following notes:
